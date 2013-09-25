@@ -1,7 +1,7 @@
 puts "Hello, how old are you?"
-age = gets.chomp
+age = gets.chomp.to_i
 
-if age.to_i > 30
+if age > 30
   puts "Are you married? Type yes or no"
   status = gets.chomp
 
@@ -14,10 +14,15 @@ end
 puts "Do you plan to have children? Type yes or no."
 breed= gets.chomp
 
-childrens_names = []
 
 if breed == "yes"
   puts "What will your childrens' names be?"
+  kids_names = gets.chomp.split
+  puts "Cool, those are great names. I particularly like #{kids_names[1]}. Will you marry me? Please say yes."
+  proposal_response = gets.chomp
+  puts "Great, we are getting married!" if proposal_response == "yes"
 end
+
+
 
 
